@@ -970,7 +970,7 @@ var Network = function () {
       value: function mutate(rate, amount) {
         function mutate(val) {
             if (Math.random() < rate) {
-              return val + Math.random() * (2 * amount) - amount;
+              return val + (Math.random() * (2 * amount) - amount);
             } else {
               return val;
             }

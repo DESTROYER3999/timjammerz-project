@@ -2,8 +2,11 @@ const canvasElement = document.getElementById("game-canvas");
 const canvasCtx = canvasElement.getContext("2d");
 
 
-const width = canvasCtx.canvas.width;
-const height = canvasCtx.canvas.height;
+const width = 500;
+const height = 500;
+
+canvasElement.width = width;
+canvasElement.height = height;
 
 const gravity = 0.2;
 const populationSize = 100;
@@ -246,6 +249,7 @@ function update(ms) {
         pipe.draw();
     }
     for (let i = 0; i < gameSpeed; i++) {
+        var myImageData = canvasCtx.createImageData(100, 100); // (40000 (100x100))
         if (Pipe.counter % 140 == 0) {
             new Pipe();
         }
