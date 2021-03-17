@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+#main-content {
+    display: inline-block;
+}
+
+canvas {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+
+.input-container {
+    width: 100%;
+    white-space: nowrap;
+}
+.info-container > span {
+    display: flex;
+}
+.info-container > span > code {
+    margin-left: auto;
+}
+.info-container > span:nth-child(odd) {
+    background-color: rgb(214, 214, 214);
+}
+
+#speed-slider {
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
