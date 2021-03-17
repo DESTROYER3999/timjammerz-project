@@ -249,7 +249,19 @@ function update(ms) {
         pipe.draw();
     }
     for (let i = 0; i < gameSpeed; i++) {
-        var myImageData = canvasCtx.createImageData(100, 100); // (40000 (100x100))
+        let scannedCanvas = canvasCtx.getImageData(0, 0, width, height);
+        let canvasData = scannedCanvas.data;
+        for (let i = 0; i < canvasData.length; i += 4) {
+            let averageColor = (canvasData[i] + canvasData[i + 1] + canvasData[i + 2]) / 3;
+            canvasData[i] = averageColor;
+            canvasData[i + 1] = averageColor;
+            canvasData[i + 2] = averageColor;
+        }
+        console.log(scannedCanvas)
+        // scannedCanvas.scale(0.5, 0.5)
+        canvasCtx.putImageData(scannedCanvas, 0, 0);
+
+
         if (Pipe.counter % 140 == 0) {
             new Pipe();
         }
@@ -303,12 +315,14 @@ function update(ms) {
 
     document.getElementById("current-score-label").innerText = Math.max.apply(Math, Bird.birds.map((bird) => {return bird.score}));
 
-    frameID = requestAnimationFrame(update)
+    // frameID = requestAnimationFrame(update)
+    setTimeout(update, 1000);
+
     
 }
+setTimeout(update, 1000);
+// let frameID = requestAnimationFrame(update);
 
-let frameID = requestAnimationFrame(update);
-
-window.addEventListener('unload', () => {
-    window.cancelAnimationFrame(frameID);
-});
+// window.addEventListener('unload', () => {
+//     window.cancelAnimationFrame(frameID);
+// });

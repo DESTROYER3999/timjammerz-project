@@ -5,8 +5,8 @@ const canvasCtx = canvasElement.getContext("2d");
 const width = canvasCtx.canvas.width;
 const height = canvasCtx.canvas.height;
 
-const gravity = 0.2;
-const populationSize = 100;
+const gravity = 0.4;
+const populationSize = 150;
 
 let generationNum = 1;
 let gameSpeed = 1;
@@ -88,12 +88,16 @@ class Bird {
                 this.die();
             }
         }
+        // canvasCtx.fillRect(0, this.y, 500, 1);
+        canvasCtx.fillRect(100, Pipe.pipes[Pipe.pipes.length - 1].topHeight, 300, 1);
+        canvasCtx.fillRect(Pipe.pipes[Pipe.pipes.length - 1].x, 0, 1, 500);
 
         // NN stuff
         let networkOutput = this.neuralNetwork.activate([
             normalize(this.y, 0, 500, 0, 1), 
-            normalize(this.velocity, -10, 10, 0, 1), 
-            normalize(Pipe.pipes[Pipe.pipes.length - 1].topHeight, 0, 500, 0, 1)
+            normalize(this.velocity, -10, 10, 0, 1),
+            normalize(Pipe.pipes[Pipe.pipes.length - 1].x, 0, 500, 0, 1), 
+            normalize(Pipe.pipes[Pipe.pipes.length - 1].topHeight, 0, 500, 0, 1),
         ])
         if (networkOutput[0] > 0.5) {
             this.jump();
@@ -101,7 +105,6 @@ class Bird {
         this.score ++;
     }
 }
-
 class Pipe {
     static pipes = [];
     static spacing = 150;
@@ -113,7 +116,13 @@ class Pipe {
         this.width = 65;
         this.x = width;
 
-        this.speed = 2.5;
+        this.speed = 6;
+
+        // if (Math.random() >= 0.5) {
+        //     this.topHeight = 5;
+        // } else {
+        //     this.topHeight = height - Pipe.spacing - 5;
+        // }
 
         this.topHeight = rand_int(0, height - Pipe.spacing);
         this.bottomHeight = height - (this.topHeight + Pipe.spacing);
@@ -198,7 +207,7 @@ function make_generation(birds) {
 
 // Set up
 for (let i = 0; i < populationSize; i ++) {
-    let inputLayer = new synaptic.Layer(3);
+    let inputLayer = new synaptic.Layer(4);
     let hiddenLayer = new synaptic.Layer(4);
     let outputLayer = new synaptic.Layer(1);
 
@@ -239,6 +248,7 @@ document.getElementById("speed-slider").oninput = (e) => {
 function update(ms) {
     canvasCtx.fillStyle = "#ffffff";
     canvasCtx.fillRect(0, 0, width, height);
+
     for (let bird of Bird.aliveBirds) {
         bird.draw();
     }
@@ -246,7 +256,7 @@ function update(ms) {
         pipe.draw();
     }
     for (let i = 0; i < gameSpeed; i++) {
-        if (Pipe.counter % 140 == 0) {
+        if (Pipe.counter % 100 == 0) {
             new Pipe();
         }
         Pipe.counter += 1;
@@ -277,8 +287,7 @@ function update(ms) {
         if (removePipe) {
             Pipe.pipes.splice(0, 1);
         }
-    
-    
+
         if (Bird.aliveBirds.length == 0) {
             generationNum ++;
             document.getElementById("generation-num-label").innerText = generationNum;
@@ -297,11 +306,14 @@ function update(ms) {
 
     }
 
+
     document.getElementById("current-score-label").innerText = Math.max.apply(Math, Bird.birds.map((bird) => {return bird.score}));
 
     frameID = requestAnimationFrame(update)
     
+    
 }
+// setInterval(update, 100);
 
 let frameID = requestAnimationFrame(update);
 
