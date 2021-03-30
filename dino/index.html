@@ -1,11 +1,11 @@
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.css">
         <title>ML Test</title>
     </head>
     <body>
         <div id="main-content">
-            <canvas id="game-canvas" width="500" height="500"></canvas>
+            <canvas id="game-canvas" width="700" height="300"></canvas>
             <div class="input-container">
                 <input type="range" min="1" max="50" value="1" id="speed-slider">
                 <span id="speed-label">1x</span>
@@ -16,9 +16,11 @@
                 <span>Best score<code id="best-score-label">0</code></span>
                 <span>Generation num<code id="generation-num-label">1</code></span>
                 <!-- <span>Fitness<span id="fitness-label">0</span></span> -->
+
+
             </div>
         </div>
-        
+
         <script src="../synaptic.js"></script>
         <script src="game.js"></script>
     </body>

@@ -178,7 +178,7 @@ function get_bird(birds) {
 
     let fitnessSum = 0;
     let randFloat = Math.random();
-    for (let bird of Bird.birds) {
+    for (let bird of birds) {
         fitnessSum += bird.fitness;
         if (randFloat <= fitnessSum) {
             bestBird = bird;
