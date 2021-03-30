@@ -73,3 +73,10 @@ function includeHTML() {
     }
   }
 };
+
+document.getElementById("speed-slider").oninput = (e) => {
+  // gameSpeed = e.currentTarget.value;
+  document.getElementById("speed-label").innerText = e.currentTarget.value + "x";
+}
+
+

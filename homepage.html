@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="homestyle.css" />
+    
 </head>
 
 <body>
@@ -65,34 +66,18 @@
                         <p class="menu-label has-text-lighter">Main</p>
                         <ul class="menu-list">
                             <li>
-                                <a href="#" class="has-text-black">
+                                <a href="#" class=" is-active has-background-primary">
                                     <i class="fas fa-tachometer-alt icon"></i>
                                     Interface</a>
                             </li>
                         </ul>
-                        <p class="menu-label has-text-lighter">Administration</p>
+                        <p class="menu-label has-text-lighter">About</p>
                         <ul class="menu-list">
-                            <li>
-                                <a href="#" class="is-active has-background-primary">
-                                    <i class="fas fa-cogs icon"></i>
-                                    Settings</a>
-                            </li>
                             <li>
                                 <a href="#" class="has-text-black">
                                     <i class="fas fa-users-cog icon"></i>
                                     Developer Team</a>
-                                <ul>
-                                    <li>
-                                        <a href="#" class="has-text-black">
-                                            <i class="fas fa-users icon"></i>
-                                            Members</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="has-text-black">
-                                            <i class="fas fa-user-plus icon"></i>
-                                            Add New</a>
-                                    </li>
-                                </ul>
+                                
                             </li>
                         </ul>
                         <p class="menu-label has-text-lighter">Other</p>
@@ -118,7 +103,7 @@
                     </div>
                 </div>
 
-                <div class="columns  is-variable is-desktop">
+                <!-- <div class="columns  is-variable is-desktop">
                     <div class="column">
                         <div class="card has-background-primary has-text-white">
                             <div class="card-header">
@@ -165,115 +150,146 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="columns is-variable">
                     <!-- <section> -->
-                        <div class="column is-12-desktop">
-                            <div class="tabs is-toggle">
-                                <ul>
-                                    <li class="is-active" data-target="flappy">
-                                        <a>
-                                            <span class="icon is-small"><i class="fas fa-dove"></i></span>
-                                            <span>Flappy Timmy</span>
-                                        </a>
-                                    </li>
-                                    <li data-target="dino">
-                                        <a>
-                                            <span class="icon is-small"><i class="fas fa-horse"></i></i></span>
-                                            <span>Dino Game</span>
-                                        </a>
-                                    </li>
-                                    <li data-target="stick">
-                                        <a>
-                                            <span class="icon is-small"><i class="fas fa-candy-cane"></i></span>
-                                            <span>Make it stick</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="box" id="tab-content">
-                                <div id="flappy">
-                                    <h3 class="is-size-5 title">Flappy Bird</h3>
-                                    <div class="columns is-variable">
-                                        <div class="column is-4-desktop is-6-tablet">
-                                            <article class="message is-info">
-                                                <div class="message-header">
-                                                    <p>Game visualizer</p>
-                                                    
-                                                    <!-- <button class="delete" aria-label="delete"></button> -->
-                                                </div>
-                                                <div class="message-body has-text-centered">
-                                                    <button class="button is-warning is-medium"><strong>Begin Training</strong></button>
-                                                    <div class="column">
-                                                        <div class="field has-addons">
-                                                            <p class="control">
-                                                              <button class="button is-link">
+                    <div class="column is-12-desktop">
+                        <div class="tabs is-toggle">
+                            <ul>
+                                <li class="is-active" data-target="flappy">
+                                    <a>
+                                        <span class="icon is-small"><i class="fas fa-dove"></i></span>
+                                        <span>Flappy Timmy</span>
+                                    </a>
+                                </li>
+                                <li data-target="dino">
+                                    <a>
+                                        <span class="icon is-small"><i class="fas fa-horse"></i></i></span>
+                                        <span>Dino Game</span>
+                                    </a>
+                                </li>
+                                <li data-target="stick">
+                                    <a>
+                                        <span class="icon is-small"><i class="fas fa-candy-cane"></i></span>
+                                        <span>Make it stick</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box" id="tab-content">
+                            <div id="flappy">
+                                <h3 class="is-size-5 title">Flappy Bird</h3>
+                                <div class="columns is-variable">
+                                    <div class="column is-4-desktop is-6-tablet">
+                                        <article class="message is-info">
+                                            <div class="message-header">
+                                                <p>Game visualizer</p>
+
+                                                <!-- <button class="delete" aria-label="delete"></button> -->
+                                            </div>
+                                            <div class="message-body has-text-centered">
+                                                <button class="button is-warning is-medium"><strong>Begin
+                                                        Training</strong></button>
+                                                <div class="column">
+                                                    <div class="field has-addons">
+                                                        <p class="control">
+                                                            <button class="button is-link">
                                                                 <span class="icon is-small">
                                                                     <i class="fas fa-step-backward"></i>
                                                                 </span>
                                                                 <span>Reverse</span>
-                                                              </button>
-                                                            </p>
-                                                            <p class="control">
-                                                              <button class="button is-success">
+                                                            </button>
+                                                        </p>
+                                                        <p class="control">
+                                                            <button class="button is-success">
                                                                 <span class="icon is-small">
                                                                     <i class="fas fa-play"></i>
                                                                 </span>
                                                                 <span>Play</span>
-                                                              </button>
-                                                            </p>
-                                                            <p class="control">
-                                                              <button class="button is-danger">
+                                                            </button>
+                                                        </p>
+                                                        <p class="control">
+                                                            <button class="button is-danger">
                                                                 <span class="icon is-small">
                                                                     <i class="fas fa-stop"></i>
                                                                 </span>
                                                                 <span>Stop</span>
-                                                              </button>
-                                                            </p>
-                                                          </div>
+                                                            </button>
+                                                        </p>
                                                     </div>
-                                                    <div id="flappyInterface" w3-include-html="./flappy_bird/index.html"></div>
                                                 </div>
-                                            </article>
-                                        </div>
-                                        <div class="column is-8-desktop is-6-tablet">
-                                            <article class="message is-success">
-                                                <div class="message-header">
-                                                    <p>Neural Network Visualizer</p>
-                                                    <button class="delete" aria-label="delete"></button>
+                                                <div id="flappyInterface" w3-include-html="./flappy_bird/index.html"></div>
+                                                <!-- <input id="sliderWithValue" class="slider has-output is-fullwidth" min="0" max="100" value="50" step="1" type="range">
+                                                <output for="sliderWithValue">50</output> -->
+                                                <!-- <input class="slider is-fullwidth is-medium is-warning is-circle" step="1" min="0" max="100" value="50" type="range"> -->
+                                                <div class="column">
+                                                    <input type="range" min="1" max="50" value="1" id="speed-slider">
+                                                    <span class="tag is-dark" id="speed-label">1x</span>
                                                 </div>
-                                                <div class="message-body">
-                                                   <strong>Currently Viewing: </strong> <br>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    <strong>Pellentesque risus mi</strong>, tempus quis placerat
-                                                    ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet
-                                                    fringilla. Nullam gravida purus diam, et dictum
-                                                    <a>felis venenatis</a> efficitur. Aenean ac
-                                                    <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu
-                                                    et sollicitudin porttitor, tortor urna tempor ligula, id
-                                                    porttitor mi magna a neque. Donec dui urna, vehicula et sem
-                                                    eget, facilisis sodales sem.
+                                                
+                                                <div class="table__wrapper">
+                                                    <table class="table is-bordered pricing__table is-fullwidth">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Current Score</td>
+                                                                <td>100000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Best Score
+                                                                </td>
+                                                                <td>10000000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Generation Number
+                                                                </td>
+                                                                <td>5</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
-                                            </article>
-                                        </div>
+                                            </div>
+                                        </article>
                                     </div>
-                                    
+                                    <div class="column is-8-desktop is-6-tablet">
+                                        <article class="message is-success">
+                                            <div class="message-header">
+                                                <p>Neuralevolution Visualizer</p>
+                                                <!-- <button class="delete" aria-label="delete"></button> -->
+                                            </div>
+                                            <div class="message-body">
+                                                <strong>Currently Viewing: </strong> <br>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat
+                                                ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet
+                                                fringilla. Nullam gravida purus diam, et dictum
+                                                <a>felis venenatis</a> efficitur. Aenean ac
+                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu
+                                                et sollicitudin porttitor, tortor urna tempor ligula, id
+                                                porttitor mi magna a neque. Donec dui urna, vehicula et sem
+                                                eget, facilisis sodales sem.
+                                            </div>
+                                        </article>
+                                    </div>
                                 </div>
-                                <div id="dino" class="is-hidden">
-                                    <h3 class="is-size-5 title">Dinosaur Game</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                        libero voluptas, quas, et totam laudantium atque veritatis doloribus
-                                        eius nam sint explicabo maxime odio.</p>
-                                </div>
-                                <div id="stick" class="is-hidden">
-                                    <h3 class="is-size-5 title">Make it stick </h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                        libero voluptas, quas, et totam laudantium atque veritatis doloribus
-                                        eius nam sint explicabo maxime odio.</p>
-                                </div>
+
+                            </div>
+                            <div id="dino" class="is-hidden">
+                                <h3 class="is-size-5 title">Dinosaur Game</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                                    libero voluptas, quas, et totam laudantium atque veritatis doloribus
+                                    eius nam sint explicabo maxime odio.</p>
+                            </div>
+                            <div id="stick" class="is-hidden">
+                                <h3 class="is-size-5 title">Make it stick </h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                                    libero voluptas, quas, et totam laudantium atque veritatis doloribus
+                                    eius nam sint explicabo maxime odio.</p>
                             </div>
                         </div>
-                        
+                    </div>
+
                     <!-- </section> -->
                 </div>
                 <div class="box">
@@ -335,6 +351,7 @@
     <script>
         includeHTML();
     </script>
+    <script src="/node_modules/bulma-extensions/bulma-calendar/dist/bulma-calendar.min.js"></script>
     <!-- <script src="./timjammerz-project/flappy_bird/index.html"></script> -->
     <!-- <script src="jquery.js"></script>  -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
