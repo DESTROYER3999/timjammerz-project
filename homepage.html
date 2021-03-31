@@ -22,9 +22,8 @@
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
-
             <a href="#" class="navbar-item has-text-weight-bold has-text-black ">
-                VizWiz
+                <h1 class="title is-3 is-family-primary has-text-weight-bold">VizWiz</h1>
             </a>
             <a role="button" class="navbar-burger nav-toggler" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -66,7 +65,7 @@
                         <p class="menu-label has-text-lighter">Main</p>
                         <ul class="menu-list">
                             <li>
-                                <a href="#" class=" is-active has-background-primary">
+                                <a href="#" class=" is-active has-background-primary" data-navigate="main">
                                     <i class="fas fa-tachometer-alt icon"></i>
                                     Interface</a>
                             </li>
@@ -74,17 +73,15 @@
                         <p class="menu-label has-text-lighter">About</p>
                         <ul class="menu-list">
                             <li>
-                                <a href="#" class="has-text-black">
+                                <a href="#" class="has-text-black" data-navigate="about">
                                     <i class="fas fa-users-cog icon"></i>
                                     Developer Team</a>
-                                
                             </li>
                         </ul>
                         <p class="menu-label has-text-lighter">Other</p>
                         <ul class="menu-list">
-
                             <li>
-                                <a href="#" class="has-text-black">
+                                <a href="#" class="has-text-black" data-navigate="other">
                                     <i class="fas fa-info-circle icon"></i>
                                     Extras</a>
                             </li>
@@ -93,255 +90,312 @@
                 </div>
             </div>
         </div>
-        <div class="column is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile">
-            <div class="p-1">
-                <div class="columns is-variable is-desktop">
-                    <div class="column">
-                        <h1 class="title">
-                            About
-                        </h1>
+        <div id="page-content">
+            <div id="main" class="column is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile">
+                <div class="p-1">
+                    <div class="columns is-variable is-desktop">
+                        <div class="column">
+                            <h1 class="title">
+                                Interface
+                            </h1>
+                        </div>
                     </div>
-                </div>
+                    <div class="columns is-variable">
+                        <!-- <section> -->
+                        <div class="column is-12-desktop">
+                            <div class="tabs is-toggle">
+                                <ul>
+                                    <li class="is-active" data-target="flappy">
+                                        <a>
+                                            <span class="icon is-small"><i class="fas fa-dove"></i></span>
+                                            <span>Flappy Timmy</span>
+                                        </a>
+                                    </li>
+                                    <li data-target="dino">
+                                        <a>
+                                            <span class="icon is-small"><i class="fas fa-horse"></i></i></span>
+                                            <span>Dino Game</span>
+                                        </a>
+                                    </li>
+                                    <li data-target="stick">
+                                        <a>
+                                            <span class="icon is-small"><i class="fas fa-candy-cane"></i></span>
+                                            <span>Make it stick</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="box" id="tab-content">
+                                <div id="flappy">
+                                    <h3 class="is-size-5 title">Flappy Bird</h3>
+                                    <div class="columns is-variable">
+                                        <div class="column is-4-desktop is-6-tablet">
+                                            <article class="message is-info">
+                                                <div class="message-header">
+                                                    <p>Game visualizer</p>
 
-                <!-- <div class="columns  is-variable is-desktop">
-                    <div class="column">
-                        <div class="card has-background-primary has-text-white">
-                            <div class="card-header">
-                                <div class="card-header-title has-text-white">
-                                    Top Seller Total
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p class="is-size-3">56,590</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card has-background-warning has-text-black">
-                            <div class="card-header">
-                                <div class="card-header-title has-text-black is-uppercase">
-                                    Revenue
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p class="is-size-3">55%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card has-background-info has-text-white">
-                            <div class="card-header">
-                                <div class="card-header-title has-text-white is-uppercase">
-                                    Feedback
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <p class="is-size-3">78 %</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card has-background-danger has-text-white">
-                            <div class="card-header">
-                                <div class="card-header-title has-text-white">Orders</div>
-                            </div>
-                            <div class="card-content">
-                                <p class="is-size-3">425k</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="columns is-variable">
-                    <!-- <section> -->
-                    <div class="column is-12-desktop">
-                        <div class="tabs is-toggle">
-                            <ul>
-                                <li class="is-active" data-target="flappy">
-                                    <a>
-                                        <span class="icon is-small"><i class="fas fa-dove"></i></span>
-                                        <span>Flappy Timmy</span>
-                                    </a>
-                                </li>
-                                <li data-target="dino">
-                                    <a>
-                                        <span class="icon is-small"><i class="fas fa-horse"></i></i></span>
-                                        <span>Dino Game</span>
-                                    </a>
-                                </li>
-                                <li data-target="stick">
-                                    <a>
-                                        <span class="icon is-small"><i class="fas fa-candy-cane"></i></span>
-                                        <span>Make it stick</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="box" id="tab-content">
-                            <div id="flappy">
-                                <h3 class="is-size-5 title">Flappy Bird</h3>
-                                <div class="columns is-variable">
-                                    <div class="column is-4-desktop is-6-tablet">
-                                        <article class="message is-info">
-                                            <div class="message-header">
-                                                <p>Game visualizer</p>
-
-                                                <!-- <button class="delete" aria-label="delete"></button> -->
-                                            </div>
-                                            <div class="message-body has-text-centered">
-                                                <button class="button is-warning is-medium"><strong>Begin
-                                                        Training</strong></button>
-                                                <div class="column">
-                                                    <div class="field has-addons">
-                                                        <p class="control">
-                                                            <button class="button is-link">
-                                                                <span class="icon is-small">
-                                                                    <i class="fas fa-step-backward"></i>
-                                                                </span>
-                                                                <span>Reverse</span>
-                                                            </button>
-                                                        </p>
-                                                        <p class="control">
-                                                            <button class="button is-success">
-                                                                <span class="icon is-small">
-                                                                    <i class="fas fa-play"></i>
-                                                                </span>
-                                                                <span>Play</span>
-                                                            </button>
-                                                        </p>
-                                                        <p class="control">
-                                                            <button class="button is-danger">
-                                                                <span class="icon is-small">
-                                                                    <i class="fas fa-stop"></i>
-                                                                </span>
-                                                                <span>Stop</span>
-                                                            </button>
-                                                        </p>
+                                                    <!-- <button class="delete" aria-label="delete"></button> -->
+                                                </div>
+                                                <div class="message-body has-text-centered">
+                                                    <button class="button is-warning is-medium"><strong>Begin
+                                                            Training</strong></button>
+                                                    <div class="column">
+                                                        <div class="field has-addons">
+                                                            <p class="control">
+                                                                <button class="button is-link">
+                                                                    <span class="icon is-small">
+                                                                        <i class="fas fa-step-backward"></i>
+                                                                    </span>
+                                                                    <span>Reverse</span>
+                                                                </button>
+                                                            </p>
+                                                            <p class="control">
+                                                                <button class="button is-success">
+                                                                    <span class="icon is-small">
+                                                                        <i class="fas fa-play"></i>
+                                                                    </span>
+                                                                    <span>Play</span>
+                                                                </button>
+                                                            </p>
+                                                            <p class="control">
+                                                                <button class="button is-danger">
+                                                                    <span class="icon is-small">
+                                                                        <i class="fas fa-stop"></i>
+                                                                    </span>
+                                                                    <span>Stop</span>
+                                                                </button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div id="flappyInterface" w3-include-html="./flappy_bird/index.html"></div>
+                                                    <div class="column">
+                                                        <input type="range" min="1" max="50" value="1" id="speed-slider">
+                                                        <span class="tag is-dark" id="speed-label">1x</span>
+                                                    </div>
+                                                    
+                                                    <div class="table__wrapper">
+                                                        <table class="table is-bordered pricing__table is-fullwidth">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Current Score</td>
+                                                                    <td>100000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Best Score
+                                                                    </td>
+                                                                    <td>10000000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        Generation Number
+                                                                    </td>
+                                                                    <td>5</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
-                                                <div id="flappyInterface" w3-include-html="./flappy_bird/index.html"></div>
-                                                <!-- <input id="sliderWithValue" class="slider has-output is-fullwidth" min="0" max="100" value="50" step="1" type="range">
-                                                <output for="sliderWithValue">50</output> -->
-                                                <!-- <input class="slider is-fullwidth is-medium is-warning is-circle" step="1" min="0" max="100" value="50" type="range"> -->
-                                                <div class="column">
-                                                    <input type="range" min="1" max="50" value="1" id="speed-slider">
-                                                    <span class="tag is-dark" id="speed-label">1x</span>
+                                            </article>
+                                        </div>
+                                        <div class="column is-8-desktop is-6-tablet">
+                                            <article class="message is-success">
+                                                <div class="message-header">
+                                                    <p>Neuralevolution Visualizer</p>
+                                                    <!-- <button class="delete" aria-label="delete"></button> -->
                                                 </div>
-                                                
-                                                <div class="table__wrapper">
-                                                    <table class="table is-bordered pricing__table is-fullwidth">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Current Score</td>
-                                                                <td>100000</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    Best Score
-                                                                </td>
-                                                                <td>10000000</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    Generation Number
-                                                                </td>
-                                                                <td>5</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                <div class="message-body">
+                                                    <strong>Currently Viewing: </strong> <br>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    <strong>Pellentesque risus mi</strong>, tempus quis placerat
+                                                    ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet
+                                                    fringilla. Nullam gravida purus diam, et dictum
+                                                    <a>felis venenatis</a> efficitur. Aenean ac
+                                                    <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu
+                                                    et sollicitudin porttitor, tortor urna tempor ligula, id
+                                                    porttitor mi magna a neque. Donec dui urna, vehicula et sem
+                                                    eget, facilisis sodales sem.
                                                 </div>
-                                            </div>
-                                        </article>
+                                            </article>
+                                        </div>
                                     </div>
-                                    <div class="column is-8-desktop is-6-tablet">
-                                        <article class="message is-success">
-                                            <div class="message-header">
-                                                <p>Neuralevolution Visualizer</p>
-                                                <!-- <button class="delete" aria-label="delete"></button> -->
-                                            </div>
-                                            <div class="message-body">
-                                                <strong>Currently Viewing: </strong> <br>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                <strong>Pellentesque risus mi</strong>, tempus quis placerat
-                                                ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet
-                                                fringilla. Nullam gravida purus diam, et dictum
-                                                <a>felis venenatis</a> efficitur. Aenean ac
-                                                <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu
-                                                et sollicitudin porttitor, tortor urna tempor ligula, id
-                                                porttitor mi magna a neque. Donec dui urna, vehicula et sem
-                                                eget, facilisis sodales sem.
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
 
-                            </div>
-                            <div id="dino" class="is-hidden">
-                                <h3 class="is-size-5 title">Dinosaur Game</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                    libero voluptas, quas, et totam laudantium atque veritatis doloribus
-                                    eius nam sint explicabo maxime odio.</p>
-                            </div>
-                            <div id="stick" class="is-hidden">
-                                <h3 class="is-size-5 title">Make it stick </h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-                                    libero voluptas, quas, et totam laudantium atque veritatis doloribus
-                                    eius nam sint explicabo maxime odio.</p>
+                                </div>
+                                <div id="dino" class="is-hidden">
+                                    <h3 class="is-size-5 title">Dinosaur Game</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                                        libero voluptas, quas, et totam laudantium atque veritatis doloribus
+                                        eius nam sint explicabo maxime odio.</p>
+                                </div>
+                                <div id="stick" class="is-hidden">
+                                    <h3 class="is-size-5 title">Make it stick </h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                                        libero voluptas, quas, et totam laudantium atque veritatis doloribus
+                                        eius nam sint explicabo maxime odio.</p>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- </section> -->
                     </div>
-
-                    <!-- </section> -->
-                </div>
-                <div class="box">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <strong>Andrew Fung</strong> <small>@andrewfungkinho</small>
-                                    <!-- <small>31m</small> -->
-                                    <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                                    efficitur sit amet massa fringilla egestas. Nullam condimentum
-                                    luctus turpis.
-                                </p>
-                                <span class="tag">
-                                    Machine Learning
-                                </span>
-                                <span class="tag">
-                                    Web Development
-                                </span>
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-64x64">
+                                    <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                                </figure>
                             </div>
-                            <nav class="level is-mobile">
-
-                                <div class="level-left">
-                                    <a class="level-item" aria-label="reply">
-                                        <span class="icon is-small">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                    </a>
-                                    <a class="level-item" aria-label="retweet">
-                                        <span class="icon is-small">
-                                            <i class="fab fa-youtube"></i>
-                                            <!-- <i class="fas fa-github" aria-hidden="true"></i> -->
-                                        </span>
-                                    </a>
-                                    <a class="level-item" aria-label="like">
-                                        <span class="icon is-small">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </span>
-                                    </a>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>Andrew Fung</strong> <small>@andrewfungkinho</small>
+                                        <!-- <small>31m</small> -->
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                        efficitur sit amet massa fringilla egestas. Nullam condimentum
+                                        luctus turpis.
+                                    </p>
+                                    <span class="tag">
+                                        Machine Learning
+                                    </span>
+                                    <span class="tag">
+                                        Web Development
+                                    </span>
                                 </div>
-                            </nav>
+                                <nav class="level is-mobile">
+
+                                    <div class="level-left">
+                                        <a class="level-item" aria-label="reply">
+                                            <span class="icon is-small">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                        </a>
+                                        <a class="level-item" aria-label="retweet">
+                                            <span class="icon is-small">
+                                                <i class="fab fa-youtube"></i>
+                                                <!-- <i class="fas fa-github" aria-hidden="true"></i> -->
+                                            </span>
+                                        </a>
+                                        <a class="level-item" aria-label="like">
+                                            <span class="icon is-small">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="column is-10-desktop is-offset-2-desktop is-9-tablet is-offset-3-tablet is-12-mobile is-hidden">
+                <div class="p-1">
+                    <!-- <div class="column"> -->
+                        <div class="container" style="height: 52px;"></div>
+                        
+                        <div class="box">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>Andrew Fung</strong> <small>@Endanger Killer#1363</small>
+                                            <!-- <small>31m</small> -->
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                            efficitur sit amet massa fringilla egestas. Nullam condimentum
+                                            luctus turpis.
+                                        </p>
+                                        <span class="tag">
+                                            Machine Learning
+                                        </span>
+                                        <span class="tag">
+                                            Web Development
+                                        </span>
+                                    </div>
+                                    <nav class="level is-mobile">
+    
+                                        <div class="level-left">
+                                            <a class="level-item" aria-label="reply">
+                                                <span class="icon is-small">
+                                                    <i class="fab fa-github"></i>
+                                                </span>
+                                            </a>
+                                            <a class="level-item" aria-label="retweet">
+                                                <span class="icon is-small">
+                                                    <i class="fab fa-youtube"></i>
+                                                    <!-- <i class="fas fa-github" aria-hidden="true"></i> -->
+                                                </span>
+                                            </a>
+                                            <a class="level-item" aria-label="like">
+                                                <span class="icon is-small">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </article>
                         </div>
-                    </article>
+                        <div class="box">
+                            <article class="media">
+                                <div class="media-left">
+                                    <figure class="image is-64x64">
+                                        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <p>
+                                            <strong>DESTROYER</strong> <small>@DESTROYER#6609</small>
+                                            <!-- <small>31m</small> -->
+                                            <br>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                                            efficitur sit amet massa fringilla egestas. Nullam condimentum
+                                            luctus turpis.
+                                        </p>
+                                        <span class="tag">
+                                            Neuralevolution Devlopment
+                                        </span>
+                                        <span class="tag">
+                                            Game Design
+                                        </span>
+                                    </div>
+                                    <nav class="level is-mobile">
+    
+                                        <div class="level-left">
+                                            <a class="level-item" aria-label="reply">
+                                                <span class="icon is-small">
+                                                    <i class="fab fa-github"></i>
+                                                </span>
+                                            </a>
+                                            <a class="level-item" aria-label="retweet">
+                                                <span class="icon is-small">
+                                                    <i class="fab fa-discord"></i>
+                                                    
+                                                </span>
+                                            </a>
+                                            <!-- <a class="level-item" aria-label="like">
+                                                <span class="icon is-small">
+                                                    <i class="fab fa-linkedin-in"></i>
+                                                </span>
+                                            </a> -->
+                                        </div>
+                                    </nav>
+                                </div>
+                            </article>
+                        </div>
+                    <!-- </div>  -->
+
                 </div>
             </div>
         </div>
+        
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"

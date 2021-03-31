@@ -46,6 +46,35 @@ tabs.forEach((tab) => {
   })
 })
 
+// page navigation
+const pages = document.querySelectorAll('.menu-wrapper a');
+const pageContentBoxes = document.querySelectorAll('#page-content > div');
+
+pages.forEach((page) => {
+  page.addEventListener('click', () => {
+
+    // console.log("pages:" + pages);
+    // console.log("page content:" + pageContentBoxes);
+
+    pages.forEach(item => item.classList.remove('is-active'))
+    pages.forEach(item => item.classList.remove('has-text-black'))
+    pages.forEach(item => item.classList.remove('has-background-primary'))
+    page.classList.add('is-active');
+    page.classList.add('has-background-primary');
+
+    const navigate = page.dataset.navigate;
+    // console.log("which one to navigate to:" + navigate);
+    pageContentBoxes.forEach(box => {
+      if(box.getAttribute('id') === navigate){
+        box.classList.remove('is-hidden');
+      }
+      else {
+        box.classList.add('is-hidden');
+      }
+    })
+  })
+})
+
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /*loop through a collection of all HTML elements:*/
